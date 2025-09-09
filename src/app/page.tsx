@@ -73,8 +73,15 @@ export default function Home() {
                 showCursor={true}
                 cursorCharacter="|"
               />
-
             </h1>
+            <h1>
+              Construindo sua Presença Digital
+            </h1>
+            <div className="items-center justify-center flex">
+              <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-green-400 bg-clip-text text-transparent p-2">Pixel</h1>
+              <h1>a</h1>
+              <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-green-400 bg-clip-text text-transparent p-2">Pixel</h1>
+            </div>
           </h1>
         </div>
       </div>
