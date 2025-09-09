@@ -18,7 +18,7 @@ const items = [
   { label: "Home", href: "#" },
   { label: "Sobre", href: "#" },
   { label: "Projetos", href: "#" },
-  { label: "Contact", href: "#" }
+  { label: "Contatos", href: "#" }
 ];
 
 export default function Home() {
@@ -41,7 +41,7 @@ export default function Home() {
                hover:bg-blue-50/70 hover:text-black text-white transition-colors duration-300
                focus-visible:ring-2 focus-visible:ring-blue-400/50"
           >
-            <SelectValue placeholder="Linguagem" />
+            <SelectValue placeholder="Português" />
           </SelectTrigger>
           <SelectContent>
             <SelectItem value="en">English</SelectItem>
