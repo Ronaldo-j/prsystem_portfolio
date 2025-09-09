@@ -10,6 +10,7 @@ interface TextTypeProps {
   cursorCharacter?: string | React.ReactNode;
   cursorBlinkDuration?: number;
   cursorClassName?: string;
+  cursorStyle?: React.CSSProperties; // <-- Adicione esta linha
   text: string | string[];
   as?: ElementType;
   typingSpeed?: number;
@@ -43,6 +44,7 @@ const TextType = ({
   onSentenceComplete,
   startOnVisible = false,
   reverseMode = false,
+  cursorStyle, // <-- Adicione aqui
   ...props
 }: TextTypeProps & React.HTMLAttributes<HTMLElement>) => {
   const [displayedText, setDisplayedText] = useState('');
@@ -185,6 +187,7 @@ const TextType = ({
       <span
         ref={cursorRef}
         className={`ml-1 inline-block opacity-100 ${shouldHideCursor ? 'hidden' : ''} ${cursorClassName}`}
+        style={cursorStyle} // <-- Use cursorStyle diretamente
       >
         {cursorCharacter}
       </span>

@@ -1,3 +1,6 @@
+"use client";
+import React from "react";
+import { Button } from "../components/ui/moving-border";
 import GooeyNav from "@/components/GooeyNav";
 import LightRays from "@/components/LightRays";
 import TextType from "@/components/TextType";
@@ -62,7 +65,7 @@ export default function Home() {
           className="custom-rays"
         />
         <div className="absolute inset-0 flex items-center justify-center">
-          <h1 className="text-white text-4xl font-bold text-center">
+          <div className="text-white text-4xl font-bold text-center">
             <h1>
               Venha ser
               <TextType
@@ -72,6 +75,7 @@ export default function Home() {
                 pauseDuration={1500}
                 showCursor={true}
                 cursorCharacter="|"
+                cursorStyle={{ color: "white" }} // Adiciona cor branca ao cursor
               />
             </h1>
             <h1>
@@ -82,7 +86,16 @@ export default function Home() {
               <h1>a</h1>
               <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-green-400 bg-clip-text text-transparent p-2">Pixel</h1>
             </div>
-          </h1>
+            <div className="p-5">
+              <Button
+                borderRadius="2.5rem"
+                className="bg-white dark:bg-slate-900 text-black dark:text-white dark:border-slate-800 px-4 py-2 text-sm cursor-pointer"
+              >
+                Ler Mais
+              </Button>
+
+            </div>
+          </div>
         </div>
       </div>
     </div>
