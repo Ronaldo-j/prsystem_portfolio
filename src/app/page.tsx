@@ -4,6 +4,7 @@ import { Button } from "../components/ui/moving-border";
 import GooeyNav from "@/components/GooeyNav";
 import LightRays from "@/components/LightRays";
 import TextType from "@/components/TextType";
+import { GlareCard } from "../components/ui/glare-card";
 import {
   Select,
   SelectContent,
@@ -52,7 +53,7 @@ export default function Home() {
         </Select>
 
       </div>
-      <div style={{ width: '100%', height: '600px', position: 'relative' }}>
+      <div style={{ width: '100%', height: '750px', position: 'relative' }}>
         <LightRays
           raysOrigin="top-center"
           raysColor="#00ffff"
@@ -99,13 +100,25 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="bg-black py-12 px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-white font-extrabold text-gray-900 sm:text-4xl mb-4">
-            Por que escolher a <span className="text-indigo-600">PrSystem</span>?
-          </h2>
-          <p className="text-xl text-white x-w-3xl mx-auto">
-            Somos o parceiro estratégico para impulsionar seu negócio no digital. Vamos além de sites e dashboards: criamos <strong>soluções logísticas inteligentes</strong> e <strong>presença digital impactante</strong> que simplificam operações, convertem clientes e aceleram seu crescimento.
-          </p>
+        <div className="bg-gradient-to-b from-oklch(38.6% 0.063 188.416) to-black h-screen py-32 px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex flex-row items-center justify-center gap-8 max-w-6xl mx-auto">
+            <div className="flex-1 flex items-center justify-center">
+              <GlareCard className="flex items-center justify-center">
+                <img
+                  className="h-full w-full absolute inset-0 object-cover"
+                  src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                />
+              </GlareCard>
+            </div>
+            <div className="flex-1 flex flex-col justify-center mt-8">
+              <h2 className="text-white font-extrabold text-gray-900 sm:text-4xl mb-4">
+                Por que escolher a <span className="text-indigo-600">PrSystem</span>?
+              </h2>
+              <p className="text-xl text-white x-w-3xl mx-auto">
+                Somos o parceiro estratégico para impulsionar seu negócio no digital. Vamos além de sites e dashboards: criamos <strong>soluções logísticas inteligentes</strong> e <strong>presença digital impactante</strong> que simplificam operações, convertem clientes e aceleram seu crescimento.
+              </p>
+            </div>
+          </div>
         </div>
 
         <div className="bg-black py-12 px-4 sm:px-6 lg:px-8 text-center">
