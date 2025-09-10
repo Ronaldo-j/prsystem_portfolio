@@ -11,7 +11,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
-import Image from "next/image";
 
 
 const items = [
@@ -24,7 +23,9 @@ const items = [
 export default function Home() {
   return (
     <div>
-      <div className="bg-transparent flex items-center justify-end gap-4 p-4">
+      <div
+        className="sticky-nav flex items-center justify-end gap-4 p-4"
+      >
         <GooeyNav
           items={items}
           particleCount={15}
@@ -97,6 +98,29 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div className="bg-black py-12 px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-white font-extrabold text-gray-900 sm:text-4xl mb-4">
+            Por que escolher a <span className="text-indigo-600">PrSystem</span>?
+          </h2>
+          <p className="text-xl text-white x-w-3xl mx-auto">
+            Somos o parceiro estratégico para impulsionar seu negócio no digital. Vamos além de sites e dashboards: criamos <strong>soluções logísticas inteligentes</strong> e <strong>presença digital impactante</strong> que simplificam operações, convertem clientes e aceleram seu crescimento.
+          </p>
+        </div>
+
+        <div className="bg-black py-12 px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-white font-extrabold text-gray-900 sm:text-4xl mb-4">
+            Nosso Projeto
+          </h2>
+        </div>
+
+        <div className="bg-black py-12 px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-white font-extrabold text-gray-900 sm:text-4xl mb-4">
+            Nosso Contato
+          </h2>
+        </div>
+
+        <footer className="bg-black py-12 px-4 sm:px-6 lg:px-8 text-center text-white"> foter aqui </footer>
       </div>
     </div>
   );
