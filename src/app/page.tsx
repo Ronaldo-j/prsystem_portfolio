@@ -106,7 +106,7 @@ export default function Home() {
               <GlareCard className="flex items-center justify-center">
                 <img
                   className="h-full w-full absolute inset-0 object-cover"
-                  src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  src="https://i.ibb.co/MykNds6J/Whats-App-Image-2025-09-04-at-09-01-38.jpg"
                 />
               </GlareCard>
             </div>
