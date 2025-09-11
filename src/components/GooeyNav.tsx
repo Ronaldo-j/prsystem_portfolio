@@ -4,7 +4,9 @@ import React, { useRef, useEffect, useState } from 'react';
 interface GooeyNavItem {
   label: string;
   href: string;
+  icon?: React.ReactNode; // <- adiciona o ícone
 }
+
 
 export interface GooeyNavProps {
   items: GooeyNavItem[];
@@ -312,9 +314,10 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
                   href={item.href}
                   onClick={e => handleClick(e, index)}
                   onKeyDown={e => handleKeyDown(e, index)}
-                  className="outline-none py-[0.6em] px-[1em] inline-block"
+                  className="outline-none py-[0.6em] px-[1em] inline-flex items-center gap-2"
                 >
-                  {item.label}
+                  {item.icon && <span className="text-lg">{item.icon}</span>}
+                  <span>{item.label}</span>
                 </a>
               </li>
             ))}
