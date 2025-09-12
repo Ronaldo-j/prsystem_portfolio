@@ -13,7 +13,7 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import { HomeOutlined, UserOutlined, BranchesOutlined, MailOutlined } from '@ant-design/icons';
+import { HomeOutlined, UserOutlined, BranchesOutlined, MailOutlined, EyeOutlined, GlobalOutlined} from '@ant-design/icons';
 
 const items = [
   { label: "Home", href: "#", icon: <HomeOutlined /> },
@@ -159,14 +159,14 @@ export default function Home() {
                     target="__blank"
                     className="px-4 py-2 rounded-xl text-xs font-normal dark:text-white"
                   >
-                    Demo
+                    <GlobalOutlined /> Demo
                   </CardItem>
                   <CardItem
                     translateZ={20}
                     as="button"
                     className="px-4 py-2 rounded-xl bg-black dark:bg-white dark:text-black text-white text-xs font-bold"
                   >
-                    Ver Mais
+                    <EyeOutlined /> Ver Mais
                   </CardItem>
                 </div>
               </CardBody>
