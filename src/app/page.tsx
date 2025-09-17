@@ -5,13 +5,6 @@ import GooeyNav from "@/components/GooeyNav";
 import LightRays from "@/components/LightRays";
 import TextType from "@/components/TextType";
 import { GlareCard } from "../components/ui/glare-card";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
 import {
   HomeOutlined,

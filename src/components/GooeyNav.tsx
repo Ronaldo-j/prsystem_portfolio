@@ -34,7 +34,8 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
   const navRef = useRef<HTMLUListElement>(null);
   const filterRef = useRef<HTMLSpanElement>(null);
   const textRef = useRef<HTMLSpanElement>(null);
-  const pathname = usePathname ? usePathname() : "";
+  const pathname = usePathname();
+
   const getActiveIndex = () => {
     const idx = items.findIndex((item) => item.href === pathname);
     if (idx !== -1) return idx;
@@ -59,7 +60,7 @@ const GooeyNav: React.FC<GooeyNavProps> = ({
     d: [number, number],
     r: number
   ) => {
-    let rotate = noise(r / 10);
+    const rotate = noise(r / 10);
     return {
       start: getXY(d[0], particleCount - i, particleCount),
       end: getXY(d[1] + noise(7), particleCount - i, particleCount),
