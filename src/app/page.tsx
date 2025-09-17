@@ -11,23 +11,28 @@ import {
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 import { CardBody, CardContainer, CardItem } from "@/components/ui/3d-card";
-import { HomeOutlined, UserOutlined, BranchesOutlined, MailOutlined, EyeOutlined, GlobalOutlined} from '@ant-design/icons';
+import {
+  HomeOutlined,
+  UserOutlined,
+  BranchesOutlined,
+  MailOutlined,
+  EyeOutlined,
+  GlobalOutlined,
+} from "@ant-design/icons";
 
 const items = [
   { label: "Home", href: "#", icon: <HomeOutlined /> },
-  { label: "Sobre", href: "#", icon:  <UserOutlined /> },
+  { label: "Sobre", href: "#", icon: <UserOutlined /> },
   { label: "Projetos", href: "#", icon: <BranchesOutlined /> },
-  { label: "Contatos", href: "#", icon: <MailOutlined /> }
+  { label: "Contatos", href: "#", icon: <MailOutlined /> },
 ];
 
 export default function Home() {
   return (
     <div>
-      <div
-        className="sticky-nav flex items-center justify-end gap-4 p-4"
-      >
+      <div className="sticky-nav flex items-center justify-end gap-4 p-4">
         <GooeyNav
           items={items}
           particleCount={15}
@@ -38,85 +43,79 @@ export default function Home() {
           timeVariance={300}
           colors={[1, 2, 3, 1, 2, 3, 1, 4]}
         />
-        <Select>
-          <SelectTrigger
-            className="w-32 h-16 border-0 bg-transparent shadow-none rounded-lg
-               hover:bg-blue-50/70 hover:text-black text-white transition-colors duration-300
-               focus-visible:ring-2 focus-visible:ring-blue-400/50"
-          >
-            <SelectValue placeholder="Português" />
-          </SelectTrigger>
-          <SelectContent>
-            <SelectItem value="en">English</SelectItem>
-            <SelectItem value="sp">Spanish</SelectItem>
-            <SelectItem value="pt">Português</SelectItem>
-          </SelectContent>
-        </Select>
-
       </div>
-      <div style={{ width: '100%', height: '750px', position: 'relative' }}>
-        <LightRays
-          raysOrigin="top-center"
-          raysColor="#00ffff"
-          raysSpeed={1.5}
-          lightSpread={0.8}
-          rayLength={1.2}
-          followMouse={true}
-          mouseInfluence={0.1}
-          noiseAmount={0.1}
-          distortion={0.05}
-          className="custom-rays"
-        />
-        <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-white text-4xl font-bold text-center">
-            <h1>
-              Venha ser
-              <TextType
-                className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-green-400 bg-clip-text text-transparent"
-                text={[" Futuro", " PrSystem!"]}
-                typingSpeed={75}
-                pauseDuration={1500}
-                showCursor={true}
-                cursorCharacter="|"
-                cursorStyle={{ color: "white" }} // Adiciona cor branca ao cursor
-              />
+      <div className="relative w-full min-h-screen">
+        <div className="absolute inset-0 h-[750px]">
+          <LightRays
+            raysOrigin="top-center"
+            raysColor="#00ffff"
+            raysSpeed={1.5}
+            lightSpread={0.8}
+            rayLength={1.2}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0.1}
+            distortion={0.05}
+            className="custom-rays"
+          />
+        </div>
+        <div className="relative z-10 flex flex-col items-center justify-center h-[750px] text-white text-center">
+          <h1 className="text-3xl sm:text-4xl font-bold">
+            Venha ser
+            <TextType
+              className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-green-400 bg-clip-text text-transparent"
+              text={[" Futuro", " PrSystem!"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={true}
+              cursorCharacter="|"
+              cursorStyle={{ color: "white" }}
+            />
+          </h1>
+          <h1 className="text-lg sm:text-xl mt-2">
+            Construindo sua Presença Digital
+          </h1>
+          <div className="flex items-center justify-center mt-2">
+            <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-green-400 bg-clip-text text-transparent p-2">
+              Pixel
             </h1>
-            <h1>
-              Construindo sua Presença Digital
+            <h1 className="text-lg sm:text-xl">a</h1>
+            <h1 className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-green-400 bg-clip-text text-transparent p-2">
+              Pixel
             </h1>
-            <div className="items-center justify-center flex">
-              <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-green-400 bg-clip-text text-transparent p-2">Pixel</h1>
-              <h1>a</h1>
-              <h1 className="text-4xl font-extrabold bg-gradient-to-r from-purple-400 via-blue-500 to-green-400 bg-clip-text text-transparent p-2">Pixel</h1>
-            </div>
-            <div className="p-5">
-              <Button
-                borderRadius="2.5rem"
-                className="bg-white dark:bg-slate-900 text-black dark:text-white dark:border-slate-800 px-4 py-2 text-sm cursor-pointer"
-              >
-                Ler Mais
-              </Button>
-
-            </div>
+          </div>
+          <div className="p-5 mt-4">
+            <Button
+              borderRadius="2.5rem"
+              className="bg-white dark:bg-slate-900 text-black dark:text-white dark:border-slate-800 px-4 py-2 text-sm cursor-pointer"
+            >
+              Ler Mais
+            </Button>
           </div>
         </div>
 
-        <div className="bg-gradient-to-b from-oklch(38.6% 0.063 188.416) to-black h-screen py-32 px-4 sm:px-6 lg:px-8 text-center">
-          <div className="flex flex-row items-center justify-center gap-8 max-w-6xl mx-auto">
-            <div className="flex-1 flex items-center justify-center">
-              <GlareCard className="flex items-center justify-center">
+        <div className="bg-gradient-to-b from-oklch(38.6% 0.063 188.416) to-black w-full py-16 sm:py-32 px-4 sm:px-6 lg:px-8 text-center">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto">
+            <div className="flex-1 flex items-center justify-center w-full md:w-auto">
+              <GlareCard className="w-full h-auto md:w-[400px] md:h-[300px] flex items-center justify-center">
                 <img
                   className="h-full w-full absolute inset-0 object-cover"
                   src="https://i.ibb.co/MykNds6J/Whats-App-Image-2025-09-04-at-09-01-38.jpg"
+                  alt="PrSystem Team"
                 />
               </GlareCard>
             </div>
-            <div className="flex-1 flex flex-col justify-center mt-8">
-              <h2 className="text-white font-extrabold text-gray-900 sm:text-4xl mb-4">
-                Por que escolher a <span className="text-indigo-600">PrSystem</span>?
+            <div className="flex-1 flex flex-col justify-center mt-8 md:mt-0 text-left">
+              <h2 className="text-white font-extrabold text-2xl sm:text-3xl lg:text-4xl mb-4">
+                Por que escolher a{" "}
+                <span className="text-indigo-600">PrSystem</span>?
               </h2>
-              <p className="text-xl text-white x-w-3xl mx-auto">
-                Somos o parceiro estratégico para impulsionar seu negócio no digital. Vamos além de sites e dashboards: criamos <strong>soluções logísticas inteligentes</strong> e <strong>presença digital impactante</strong> que simplificam operações, convertem clientes e aceleram seu crescimento.
+              <p className="text-lg sm:text-xl text-white max-w-3xl mx-auto md:mx-0">
+                Somos o parceiro estratégico para impulsionar seu negócio no
+                digital. Vamos além de sites e dashboards: criamos{" "}
+                <strong>soluções logísticas inteligentes</strong> e{" "}
+                <strong>presença digital impactante</strong> que simplificam
+                operações, convertem clientes e aceleram seu crescimento.
               </p>
             </div>
           </div>
@@ -140,7 +139,8 @@ export default function Home() {
                   translateZ="60"
                   className="text-neutral-500 text-sm max-w-sm mt-2 dark:text-neutral-300"
                 >
-                  Uma landing page de venda de carros que oferece uma experiência de usuário envolvente e moderna.
+                  Uma landing page de venda de carros que oferece uma
+                  experiência de usuário envolvente e moderna.
                 </CardItem>
                 <CardItem translateZ="100" className="w-full mt-4">
                   <img
@@ -171,8 +171,6 @@ export default function Home() {
                 </div>
               </CardBody>
             </CardContainer>
-
-            
           </div>
         </div>
 
@@ -182,7 +180,9 @@ export default function Home() {
           </h2>
         </div>
 
-        <footer className="bg-black py-12 px-4 sm:px-6 lg:px-8 text-center text-white">© 2025 PrSystem. All rights reserved. </footer>
+        <footer className="bg-black py-12 px-4 sm:px-6 lg:px-8 text-center text-white">
+          © 2025 PrSystem. All rights reserved.{" "}
+        </footer>
       </div>
     </div>
   );
